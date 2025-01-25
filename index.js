@@ -1,18 +1,3 @@
-function greet(name, lastName) {
-    console.log('hello ' + name + ' ' + lastName)
+for (let i = 1; i <= 5; i++) {
+    if (i % 2 != 0) console.log("hello", i);
 }
-
-function square(number) {
-    return number * number;
-}
-
-greet('John', 'Smith');
-
-let number = square(2);
-console.log(number);
-
-console.log(number++)
-console.log(++number)
-
-console.log(number == '6')
-console.log(number === '6')
