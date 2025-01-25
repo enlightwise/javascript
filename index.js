@@ -1,12 +1,4 @@
-// reference types: Object, Array, Function
+let selectedColors = ['red', 'blue'];
+selectedColors[2] = 'green'
 
-let person = {
-    name: 'John',
-    age: 20
-};
-
-person.name = 'Joh'
-let selection = 'name';
-person[selection] = 'Mary'
-
-console.log(person);
+console.log(selectedColors.length);
