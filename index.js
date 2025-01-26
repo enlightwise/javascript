@@ -1,13 +1,16 @@
-const numbers = [1, 2, 3];
+const numbers = [1, -1, 2, 3];
+
+const filtered = numbers.filter(n => n >= 0);
 
 
-numbers.join(',');
+// const items = filtered.map(n => '<li>' + n + '</li>');
+// const html = '<ul>' + items.join(''); + '</ul>';
+// console.log(html);
 
-console.log(numbers);
 
-const message = 'This is my first message';
-const parts = message.split(' ');
-console.log(parts);
+const items = filtered.map(n => ({ value: n}));
 
-const combined = parts.join('-');
-console.log(combined);
+
+console.log(items);
+
+
