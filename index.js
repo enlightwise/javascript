@@ -1,10 +1,15 @@
-// dynamic nature of objects
+// functions are objects
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
 
-const circle = {
-    radius: 1
-};
+const circle = new Circle(1);
+console.log(Circle.name);
+console.log(Circle.length);
 
-circle.color = 'yellow';
-delete circle.color; // delete a member from object
-
-console.log(circle);
+// new String();
+// new Boolean();
+// new Number();
