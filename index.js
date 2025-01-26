@@ -1,17 +1,10 @@
-const circle = {
-    radius: 1
-};
+const message = 
+'This is my\n' +
+'\'first\' message';
 
-// clone an object
-// const another = {};
-// for (let key in circle)
-//     another[key] = circle[key];
+console.log(message);
 
-
-
-// const another = Object.assign({}, circle);
-
-
-const another = { ...circle};
+const another = `This is my
+'first' message`;
 
 console.log(another);
