@@ -1,20 +1,11 @@
+const first = [1, 2, 3];
+const second = [4, 5, 6];
 
-let numbers = [1, 2, 3, 4];
-let another = numbers;
 
-// solution 1 - doesn't work if there are references to the object
-// numbers = [];
+// combine
+const combined = first.concat(second);
+// slice
+const slice = combined.slice(2, 4);
 
-// solution 2
-// numbers.length = 0;
-
-// solution 3
-// numbers.splice(0, numbers.length);
-
-// solution 4
-while (numbers.length > 0)
-    numbers.pop();
-
-console.log(numbers);
-console.log(another);
-
+console.log(combined);
+console.log(slice);
