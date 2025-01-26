@@ -1,7 +1,12 @@
-const now = new Date();
-const date1 = new Date('May 11 2020 09:00');
-const date2 = new Date(2020, 1, 11, 9);
+const numbers = [3, 4];
 
-console.log(now.toDateString());
-console.log(now.toTimeString());
-console.log(now.toISOString());
+// end
+numbers.push(5, 6);
+
+
+// beginning
+numbers.unshift(1, 2);
+
+numbers.splice(2, 0, 'a', 'b');
+
+console.log(numbers);
