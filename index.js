@@ -1,12 +1,25 @@
-const numbers = [3, 4];
+// primitives
+const numbers = [1, 2, 3, 1, 4];
 
-// end
-numbers.push(5, 6);
+console.log(numbers.indexOf(1, 2));
+console.log(numbers.lastIndexOf(1));
+
+console.log(numbers.includes(1))
 
 
-// beginning
-numbers.unshift(1, 2);
+// finding elements reference types
+const courses = [
+    { id: 1, name: 'a'},
+    { id: 2, name: 'b'},
+];
 
-numbers.splice(2, 0, 'a', 'b');
 
-console.log(numbers);
+// const course = courses.find(function(course) {
+//     return course.name === 'a';
+// });
+
+const course = courses.findIndex(function(course) {
+    return course.name === 'a';
+});
+
+console.log(course);
