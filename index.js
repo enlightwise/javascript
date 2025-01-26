@@ -1,12 +1,10 @@
-const movie = {
-    title: 'a',
-    director: 'b'
-}
+showStars(10);
 
-showProperties(movie);
-
-function showProperties(obj) {
-    for (let key in obj)
-        if (typeof obj[key] === 'string')
-            console.log(key, obj[key]);
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+            pattern += '*';
+        console.log(pattern);
+    }
 }
