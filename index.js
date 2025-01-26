@@ -1,11 +1,10 @@
-const numbers = [1, -1, 2, 3];
+const numbers = arrayFromRange(-10, -4);
 
-// let sum = 0;
-// for (let n of numbers)
-//     sum += n;
-// console.log(sum);
+console.log(numbers);
 
-const sum = numbers.reduce(
-    (accumulator, currentValue) => accumulator + currentValue);
-
-console.log(sum);
+function arrayFromRange(min, max) {
+    let array = [];
+    for (let i = min; i <= max; i++)
+        array.push(i);
+    return array;
+}
