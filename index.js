@@ -1,16 +1,11 @@
 const numbers = [1, -1, 2, 3];
 
-const filtered = numbers.filter(n => n >= 0);
+// let sum = 0;
+// for (let n of numbers)
+//     sum += n;
+// console.log(sum);
 
+const sum = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue);
 
-// const items = filtered.map(n => '<li>' + n + '</li>');
-// const html = '<ul>' + items.join(''); + '</ul>';
-// console.log(html);
-
-
-const items = filtered.map(n => ({ value: n}));
-
-
-console.log(items);
-
-
+console.log(sum);
