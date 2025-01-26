@@ -1,16 +1,11 @@
-const output = fizzBuzz('a');
-console.log(output);
+const array = [0, null, undefined, '', 2, true];
 
-function fizzBuzz(input) {
-    if (typeof input !== 'number')
-        return NaN;
+console.log(countTruthy(array));
 
-    if ((input % 3 === 0) && (input % 5 === 0))
-        return 'FizzBuzz';
-    if (input % 3 === 0)
-        return 'Fizz';
-    if (input % 5 === 0)
-        return 'Buzz';
-
-    return input;
+function countTruthy(array) {
+    let count = 0;
+    for (let value of array)
+        if (value)
+            count++;
+        return count;
 }
