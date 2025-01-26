@@ -2,15 +2,16 @@ const circle = {
     radius: 1
 };
 
+// clone an object
+// const another = {};
+// for (let key in circle)
+//     another[key] = circle[key];
 
-for (let key in circle)
-    console.log(key, circle[key]);
 
-// for (let key of circle) // TypeError: circle is not iterable
-    // console.log(key);
 
-for (let key of Object.keys(circle)) // TypeError: circle is not iterable
-    console.log(key);
+// const another = Object.assign({}, circle);
 
-for (let entry of Object.entries(circle)) // TypeError: circle is not iterable
-    console.log(entry);
+
+const another = { ...circle};
+
+console.log(another);
