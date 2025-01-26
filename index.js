@@ -1,13 +1,7 @@
-const first = [1, 2, 3];
-const second = [4, 5, 6];
+const numbers = [1, 2, 3];
 
 
-// combine - spread operator
-const combined = [...first, 'a', ...second]
-// slice
-// const copy = combined.slice(2, 4);
-const copy = [...combined];
+for (let number of numbers)
+    console.log(number);
 
-console.log(combined);
-console.log(copy);
-
+numbers.forEach((number, index) => console.log(index, number));
