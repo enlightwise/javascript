@@ -1,30 +1,16 @@
-// let x = 10;
-// let y = x;
+const circle = {
+    radius: 1
+};
 
-// x = 20;
 
-let x = {value: 10};
-let y = x; // reference/address is copied, not value
+for (let key in circle)
+    console.log(key, circle[key]);
 
-x.value = 20;
+// for (let key of circle) // TypeError: circle is not iterable
+    // console.log(key);
 
-// primities are copied by their value
-// objects are copied by their reference
+for (let key of Object.keys(circle)) // TypeError: circle is not iterable
+    console.log(key);
 
-// let number = 10;
-
-// function increase(number){
-//     number++;
-// }
-
-// increase(number);
-// console.log(number);
-
-let obj = {value: 10};
-
-function increase(obj){
-    obj.value++;
-}
-
-increase(obj);
-console.log(obj);
+for (let entry of Object.entries(circle)) // TypeError: circle is not iterable
+    console.log(entry);
