@@ -1,25 +1,20 @@
-// finding elements reference types
-const courses = [
-    { id: 1, name: 'a'},
-    { id: 2, name: 'b'},
-];
 
-// arrow function
-const course = courses.find(course => course.name === 'a');
+let numbers = [1, 2, 3, 4];
+let another = numbers;
 
-console.log(course);
+// solution 1 - doesn't work if there are references to the object
+// numbers = [];
 
+// solution 2
+// numbers.length = 0;
 
-// remove elements
-const numbers = [1, 2, 3, 4];
+// solution 3
+// numbers.splice(0, numbers.length);
 
-// end
-const last = numbers.pop();
-
-// remove from beginning
-numbers.shift();
-
-// middle
-numbers.splice(1, 1); // remove at index 1, 1 element
+// solution 4
+while (numbers.length > 0)
+    numbers.pop();
 
 console.log(numbers);
+console.log(another);
+
