@@ -1,29 +1,10 @@
+// dynamic nature of objects
 
-// Factory function
-function createCircle(radius)
-{
-    return {
-        radius, // same as radius: radius,
-        draw() { // same as draw: function() {
-            console.log('draw');
-        }
-    };
-}
+const circle = {
+    radius: 1
+};
 
-const circle1 = createCircle(1);
-console.log(circle1);
+circle.color = 'yellow';
+delete circle.color; // delete a member from object
 
-const circle2 = createCircle(1);
-console.log(circle2);
-
-// Constructor Function
-function Circle(radius) {
-    this.radius = radius;
-    this.draw = function() {
-        console.log('draw');
-    }
-    // return this;
-}
-
-const circle = new Circle(1);
-circle.draw();
+console.log(circle);
